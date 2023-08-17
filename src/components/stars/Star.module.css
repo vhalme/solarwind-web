@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.star {
+  scale: 2.0;
+  border-radius: 50%;
+  cursor: pointer;
+}

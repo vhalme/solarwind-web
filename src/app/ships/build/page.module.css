@@ -1,0 +1,24 @@
+.root {
+  min-height: 300px;
+}
+
+.buildShipHeader {
+  margin-bottom: 24px;
+}
+
+.buildShipError {
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.buildShipForm {
+  display: flex;
+}
+
+.buildShipForm .shipName {
+  margin-right: 8px;
+}
+
+.buildShipForm .buildButton button {
+  height: 56px;
+}

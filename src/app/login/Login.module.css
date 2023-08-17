@@ -1,0 +1,130 @@
+.root {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    opacity: 1;
+    margin-top: 6px;
+    display: flex;
+    justify-content: center;
+}
+
+.loginFormContainer {
+    max-width: 600px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 36px;
+    border: 1px solid rgb(205, 205, 205)
+}
+
+.formLabel {
+    display: flex;
+    margin-top: -10px;
+    margin-left: -6px;
+    width: fit-content;
+    background-color: black;
+    opacity: 1;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-weight: bold;
+}
+
+.loginDescription {
+
+}
+
+.localLogin {
+    margin-bottom: 48px;
+}
+
+.localLogin .loginInputs {
+    display: flex;
+    margin-top: 24px;
+}
+
+.localLogin .loginInputs .inputContainer {
+    margin-right: 8px;
+}
+
+.localLogin .loginInputs .inputContainer .textFieldContainer {
+    min-width: 250px;
+}
+
+.localLogin .submitContainer {
+    display: flex;
+    margin-top: 24px;
+    justify-content: center;
+}
+
+.localLogin .submitContainer .loginButtonContainer {
+    width: 200px;
+}
+
+.localLogin .submitContainer .signInInfo {
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
+    color:rgb(155, 155, 155)
+}
+
+.loginTypeDivider {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgb(200, 200, 200)
+}
+
+.loginTypeDivider .dividerLabel {
+    display: flex;
+    margin-top: -10px;
+    margin-left: -6px;
+    width: fit-content;
+    background-color: black;
+    opacity: 1;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-weight: bold;
+}
+
+.ssoLogins {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+.ssoLogins .metamaskLogin {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.ssoLogins .googleLogin {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.ssoLogins .facebookLogin {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+@media (max-width: 580px) {
+
+    .loginFormContainer {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    
+    .localLogin .loginInputs {
+        flex-direction: column;
+    }
+    .localLogin .loginInputs .inputContainer {
+        margin-bottom: 6px;
+    }
+
+}
+
+@media (max-width: 580px) {
+
+    .loginFormContainer {
+        border: none;
+    }
+    
+}

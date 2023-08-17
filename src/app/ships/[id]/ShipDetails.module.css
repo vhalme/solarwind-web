@@ -1,0 +1,190 @@
+.ship {
+  width: 300px;
+  height: 360px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+}
+
+.faded {
+  opacity: 0.5;
+}
+
+.shipDetails {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+
+.shipDetails .shipGraphics {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.shipDetails .shipGraphics .shipBackground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.shipDetails .shipGraphics .starContainer {
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  transform: translate(10%, 10%);
+  position: absolute;
+}
+
+.shipDetails .shipGraphics .shipIcon {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(50%, 50%);
+}
+
+.shipDetails .starLabel {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  white-space: nowrap;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.shipDetails .shipName {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.shipDetails .shipIcon {
+  position: relative;
+}
+
+.shipDetails .shipIcon svg {
+  width: 150px;
+  height: 150px;
+}
+
+
+.ship .shipStatus {
+  position: absolute;
+  bottom: 6px;
+}
+
+.ship .shipStatus .shipStatusTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ship .shipStatus .shipStatusInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shipDestination {
+  margin-top: -4px;
+  display: flex;
+  align-items: center;
+}
+
+
+.shipDestination .destinationIcon {
+  margin-top: 2px;
+}
+
+.shipDestination .destinationIcon svg {
+  font-size: 20px;
+}
+
+
+.shipDestination .destinationLabel {
+  margin-left: 4px;
+}
+
+.ship .harvestingStatus {
+  position: absolute;
+  bottom: 0;
+}
+
+.ship .harvestingStatus .shipStatusTitle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;
+  margin-left: 4px;
+}
+
+.ship .harvestingStatus .shipStatusTitle .statusIcon {
+  margin-left: 12px;
+}
+
+.ship .harvestingStatus .shipStatusTitle .statusIcon svg {
+  width: 20px;
+  height: 20px;
+  fill: rgb(200, 200, 200)
+}
+
+.ship .shipStatus .statusIcon {
+}
+
+.ship .shipStatus .statusText {
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-top: -5px;
+}
+
+.rotatingLeft {
+  animation-name: rotateLeft;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+.rotatingRight {
+  animation-name: rotateRight;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotateLeft {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateRight {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 400px) {
+  .productFrame {
+    width: 90%;
+  }
+}

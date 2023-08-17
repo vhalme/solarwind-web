@@ -1,0 +1,124 @@
+.sendShipMenu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 300px;
+  z-index: 1;
+}
+
+.closeMenu {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+}
+
+.closeMenu .closeButton {
+  cursor: pointer;
+}
+
+.sendShipMenu .ship {
+  margin-bottom: 16px;
+}
+
+
+.sendShipMenu .starSearch {
+
+}
+
+.sendShipMenu .starSearch .selectedStar {
+  border: 1px solid white;
+  display: inline-flex;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 24px;
+}
+
+.sendShipMenu .starSearch .selectedStar .selectedStarName {
+  margin-right: 8px;
+}
+
+
+.sendShipMenu .starSearch .selectedStar .searchAnotherStar {
+  display: contents;
+  cursor: pointer;
+}
+
+.sendShipMenu .starSearch .selectedStar .searchAnotherStar svg {
+  width: 18px;
+  height: 18px;
+}
+
+.sendShipMenu .starSearch .searchField {
+
+}
+
+
+.sendShipMenu .starSearch .searchResults {
+  margin-top: 12px;
+}
+
+.sendShipMenu .starSearch .searchResults .starResult {
+  cursor: pointer;
+}
+
+.fuelCalculator {
+  margin-top: 12px;
+}
+
+.fuelCalculator .fuelConfig {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.fuelCalculator .fuelConfig .fuelAmountInput {
+  width: 120px;
+}
+
+.fuelCalculator .fuelConfig .slw {
+  margin-left: 6px;
+}
+
+.fuelCalculator .travelSubmit {
+  margin-top: 24px;
+}
+
+.travelTime {
+  margin-bottom: 6px;
+}
+
+.travelTime .travelTimeTitle {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.go {
+  margin-top: 24px;
+}
+
+.attackShipHeader {
+  margin-bottom: 24px;
+}
+
+.targetShip {
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+.targetShip .targetShipTitle {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.targetShip .targetShipName {
+  margin-top: 6px;
+}
+
+.targetShip .attackingShipTitle {
+  margin-top: 16px;
+  font-size: 10px;
+  font-weight: bold;
+}

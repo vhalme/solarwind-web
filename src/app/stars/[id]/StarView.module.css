@@ -1,0 +1,438 @@
+.root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+.prevOverlayArrow {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  z-index: 1;
+}
+
+.nextOverlayArrow {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  z-index: 1;
+  animation: moveArrow 2s ease-in-out 1;
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0px);
+    scale: 1.0;
+  }
+  20% {
+    transform: translateX(-12px);
+    scale: 2.5;
+  }
+  35% {
+    transform: translateX(0px);
+    scale: 2.5;
+  }
+  50% {
+    transform: translateX(-12px);
+    scale: 2.5;
+  }
+  65% {
+    transform: translateX(0px);
+    scale: 2.5;
+  }
+  80% {
+    transform: translateX(-12px);
+    scale: 2.5;
+  }
+  100% {
+    transform: translateX(0px);
+    scale: 1.0;
+  }
+}
+
+.overlays {
+  position: absolute;
+  width: 0px;
+  top: 0px;
+  height: 100%;
+  transition: left 1s ease-in-out;
+}
+
+.currentOverlay {
+  position: absolute;
+  width: 0px;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+
+.overlay {
+  position: absolute;
+  width: 0px;
+  height: 100%;
+  top: 0px;
+}
+
+.clickSurface {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.starView {
+  width: 100%;
+}
+
+.starDetails {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 18px;
+  padding-top: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.starDetails .starName {
+  margin-bottom: 6px;
+}
+
+.starDetails .basicInfo {
+  display: block;
+  position: relative;
+}
+
+.starDetails .basicInfo div {
+  text-align: left;
+}
+
+.starContainer {
+  position: absolute;
+}
+
+.trajectoryContainer {
+  position: relative;
+}
+
+.objInSpace {
+  position: absolute;
+  opacity: 1;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+}
+
+.shipInSpace {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1200px;
+  height: 1200px;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  animation: rotate 60s linear infinite;
+}
+
+.shipIcon {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 50%;
+  transform: rotateX(90deg) rotateY(0deg) rotateZ(180deg) translateX(-30px);
+  font-size: 8px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.shipSphere {
+  position: absolute;
+  display: inline-block;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.shipSphere .circle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.shipSphere .clickableCircle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.shipSphere .visibleClickableCircle {
+  transform: perspective(1000px) rotateX(90deg) rotateY(0deg) rotateZ(90deg) translateX(0px) translateY(20px) translateZ(20px);
+}
+
+.shipSphere .invisibleClickableCircle1 {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(90deg) translateX(-20px) translateY(20px) translateZ(0px);
+}
+
+.shipSphere .invisibleClickableCircle2 {
+  transform: perspective(1000px) rotateX(0deg) rotateY(90deg) rotateZ(0deg) translateX(0px) translateY(-20px) translateZ(-20px);
+}
+
+.shipSphere .invisibleClickableCircle3 {
+  transform: perspective(1000px) rotateX(45deg) rotateY(45deg) rotateZ(45deg) translateX(-20px) translateY(10px) translateZ(-10px);
+}
+
+.shipSphere .t1 {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.shipSphere .t2 {
+  transform: perspective(1000px) rotateX(30deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.shipSphere .t3 {
+  transform: perspective(1000px) rotateX(60deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.shipSphere .t4 {
+  transform: perspective(1000px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.shipSphere .t5 {
+  transform: perspective(1000px) rotateX(120deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.shipSphere .t6 {
+  transform: perspective(1000px) rotateX(150deg) rotateY(0deg) rotateZ(0deg);
+}
+
+.shipSphere .t7 {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(90deg);
+}
+
+.shipSphere .t8 {
+  transform: perspective(1000px) rotateX(0deg) rotateY(30deg) rotateZ(90deg);
+}
+
+.shipSphere .t9 {
+  transform: perspective(1000px) rotateX(0deg) rotateY(60deg) rotateZ(90deg);
+}
+
+.shipSphere .t10 {
+  transform: perspective(1000px) rotateX(0deg) rotateY(90deg) rotateZ(90deg);
+}
+
+.shipSphere .t11 {
+  transform: perspective(1000px) rotateX(0deg) rotateY(120deg) rotateZ(90deg);
+}
+
+.shipSphere .t12 {
+  transform: perspective(1000px) rotateX(0deg) rotateY(150deg) rotateZ(90deg);
+}
+
+.shipSelector {
+  width: 30px;
+  height: 30px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.shipSelected {
+  border: 1px solid green;
+}
+
+.starOwnerSection {
+  right: 96px;
+  top: 12px;
+  z-index: 1;
+}
+
+.starOwnerInfo {
+  display: flex;
+}
+
+.starOwnerInfo .starOwnerIcon {
+  display: contents;
+}
+
+
+.starOwnerInfo .starOwnerIcon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.starOwnerInfo .starOwnerName {
+  margin-left: 8px;
+}
+
+.starOwnerInfo .starOwnerName .starOwnerNameCaption {
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.starOwnerInfo .starOwnerName .starOwnerNameValue {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.claimStar {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.starControls {
+  position: absolute;
+  right: 12px;
+  top: 44px;
+  z-index: 1;
+}
+
+.accountControls {
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  z-index: 4;
+}
+
+.accountControls .accountControlsLabel{
+  font-size: 14px;
+}
+
+.starControls .control {
+  margin-bottom: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.appControls {
+  position: absolute;
+  right: 12px;
+  bottom: 20px;
+  z-index: 4;
+}
+
+.appControls .control {
+  margin-top: 8px;
+  position: relative;
+  cursor: pointer;
+}
+
+.shipsListContainer {
+}
+
+.shipsSection { 
+  margin-bottom: 24px;
+}
+
+.shipsSection .shipsSectionTitle {
+  font-size: 10px;
+  font-weight: bold;
+  padding-bottom: 2px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.shipsList {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.shipsList .ship {
+  margin-bottom: 2px;
+  display: flex;
+  cursor: pointer;
+}
+
+.bottomPanel {
+  position: absolute;
+  left: calc(50% - 18px);
+  bottom: 0px;
+}
+
+.claimPanel {
+  padding-bottom: 24px;
+  padding-left: 6px;
+  padding-right: 6px;
+  min-width: 300px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.detailPanel {
+  padding: 12px;
+  min-width: 300px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.shipDetails {
+}
+
+.shipDetails .shipName {
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2px dotted rgba(255, 255, 255, 0.25);
+}
+
+.shipDetails .shipActions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shipDetails .shipActionsLeft {
+  display: flex;
+  margin-left: -4px;
+}
+
+
+.shipDetails .shipActionsRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.shipDetails .shipActions .action {
+  margin-right: 4px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.sendShipMenu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 300px;
+  z-index: 1;
+}
+
+.sendShipMenu .ship {
+  margin-bottom: 16px;
+}
+
+
+.sendShipMenu .star {
+
+}

@@ -1,0 +1,69 @@
+.ship {
+  position: relative;
+  width: 96vw;
+  max-width: 400px;
+  border: 1px solid rgb(70, 70, 70);
+  padding-bottom: 6px;
+  padding-top: 4px;
+  padding-left: 6px;
+  padding-right: 4px;
+  margin-right: 6px;
+  margin-left: 6px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ship .shipIcon {
+}
+
+.ship .shipInfo {
+  flex: 1;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.ship .shipInfo .row1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.shipName {
+}
+
+.shipHealth {
+}
+
+.shipHealth .circle {
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.shipHealth .healthValue {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ship .shipInfo .row2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shipStatus {
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: rgb(200, 200, 200);
+  padding-right: 4px;
+  padding-left: 4px;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.ship .shipIcon svg {
+  font-size: 46px;
+}

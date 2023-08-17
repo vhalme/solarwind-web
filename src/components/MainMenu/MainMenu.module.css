@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+  justify-content: space-around;
+  height: 36px;
+  width: 100%;
+}
+
+.root .menuSection {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+
+.menuSectionSelected {
+  font-weight: bold;
+}

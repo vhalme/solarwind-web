@@ -1,0 +1,84 @@
+.root {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+.topSection {
+    display: flex;
+    position: relative;
+    margin-bottom: 24px;
+    width: 100%;
+    justify-content: center;
+    z-index: 1;
+}
+
+.events {
+  margin-top: -16px;
+  margin-bottom: 12px;
+  width: calc(100% - 16px);
+  max-width: 420px;
+}
+
+.events .event {
+  background-color: rgb(200, 200, 200);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 6px;
+  border: 1px solid white;
+  border-radius: 8px;
+  color: black;
+  display: flex;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.events .event .content {
+  padding-right: 2px;
+}
+
+.events .event .content .icon {
+  float: left;
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+}
+
+
+.events .event .content .icon svg {
+  width: 34px;
+  height: 34px;
+}
+
+.events .event .content .text {
+  font-size: 15px;
+  text-align: justify;
+}
+
+.events .event .close {
+  position: absolute;
+  bottom: -24px;
+  right: 2px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.events .event .close svg {
+  font-size: 28px;
+  background-color: black;
+  color: #90caf9;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.events .event .close .text {
+  height: 14px;
+  margin-left: 2px;
+  font-size: 14px;
+  color: #90caf9;
+}

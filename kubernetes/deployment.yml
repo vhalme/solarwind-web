@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: solarwind-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: solarwind-web
+  template:
+    metadata:
+      labels:
+        app: solarwind-web
+    spec:
+      containers:
+      - name: solarwind-web
+        image: vhalme/solarwind-web:x86_0.0.47
+        ports:
+        - containerPort: 3003
+        env:
+        - name: APP_URL
+          value: "https://solarwindmetaverse.com"

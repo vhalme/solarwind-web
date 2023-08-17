@@ -1,0 +1,208 @@
+.root {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.topSection {
+  display: flex;
+  position: relative;
+  margin-bottom: 24px;
+  width: 100%;
+  justify-content: center;
+  z-index: 1;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.title {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  color: white;
+}
+
+.title .logo {
+
+}
+
+.title .logo .logoSolarwind {
+  font-size: 39px;
+}
+
+
+.title .logo .logoMetaverse {
+  font-size: 18px;
+  letter-spacing: 15px;
+  margin-left: 12px;
+}
+
+.title .slogan {
+  margin-bottom: 36px;
+  font-size: 17px;
+}
+
+.title .openApp {
+  margin-top: 24px;
+}
+
+.bottom {
+  margin-bottom: 24px;
+  font-size: 20px;
+  color: rgba(120, 120, 120);
+}
+
+.bottom .largeText {
+  font-size: 24px;
+  color: rgb(41, 75, 140);
+}
+
+.parallax {
+  top: 0px;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  overflow-y: visible;
+}
+
+.layer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh; /* Adjust this based on your layout */
+  background-repeat: repeat-x;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+
+.layer1 {
+  z-index: -4;
+  height: 128vh;
+  background-image: url('/neb-bg.png');
+}
+
+.layer2 {
+  top: -10px;
+  left: -50px;
+  width: calc(100% + 50px);
+  z-index: -2;
+  background-image: url('/neb12.png'); /* Replace with your image */
+}
+
+.layer3 {
+  top: 10px;
+  z-index: -1;
+}
+
+.layer img {
+  width: 100%;
+}
+
+.shipLayer {
+  position: fixed;
+  top: 50vh;
+  right: 0px;
+  width: 300px;
+  height: 300px;
+  z-index: -4;
+  background-size: cover;
+  background-image: url('/space-ship-2-transparent.png');
+  animation: moveShip 30s ease-in-out forwards;
+}
+
+@keyframes moveShip {
+  0% {
+    transform: translate3d(0px, 0px, 0px) scale(1.0);
+  }
+  100% {
+    transform: translate3d(-100vw, -25vw, 0px) scale(5.0);
+  }
+}
+
+
+.content {
+  margin-top: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .contentBlock {
+  width: 80%;
+  min-height: 160px;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgb(220, 220, 220);
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .lastContentBlock {
+  width: 80%;
+  max-width: 600px;
+  padding-top: 20px;
+  color: rgb(220, 220, 220);
+  border-radius: 20px;
+  font-size: 18px;
+  margin-bottom: 100px;
+}
+
+.content .lastContentBlock .textBlock {
+  margin-top: 32px;
+  margin-bottom: 23px;
+  transition: scale 1s linear;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.content .lastContentBlock .textBlockUnfocused {
+  scale: 0.75;
+}
+
+.content .lastContentBlock .textBlockFocused {
+  scale: 1.1;
+}
+
+.content .contentBlock .contentBlockActionHidded {
+  overflow: hidden;
+  height: 0px;
+  transition: height 1s linear, padding-top 1s linear;
+}
+
+.content .contentBlock .contentBlockActionHidded button {
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.content .contentBlock .contentBlockActionVisible {
+  overflow: hidden;
+  padding-top: 16px;
+  height: 52px;
+  transition: height 0.2s linear;
+}
+
+.content .contentBlock .contentBlockActionVisible button {
+  opacity: 1.0;
+  transition: opacity 1s linear;
+}

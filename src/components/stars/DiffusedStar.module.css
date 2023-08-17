@@ -1,0 +1,90 @@
+.root {
+}
+
+.layeredStar {
+  position: relative;
+}
+
+.layeredStar .backgroundLayer {
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  opacity: 0.6;
+  border-radius: 50%;
+  left: -50%;
+  top: -50%;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1)), url('/noise.svg');
+}
+
+.layeredStar .animation1 {
+  animation: animateBg1 6s linear infinite;
+}
+
+.layeredStar .animation2 {
+  animation: animateBg2 12s ease-in-out infinite;
+}
+
+.layeredStar .animation3 {
+  animation: animateBg3 24s linear infinite;
+}
+
+.layeredStar .animation4 {
+  animation: animateBg4 12s ease-in-out infinite;
+}
+
+.layeredStar .gradientLayer {
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  border-radius: 50%;
+  left: -50%;
+  top: -50%;
+}
+
+@keyframes animateBg1 {
+  0% {
+    transform: rotateZ(0deg) scaleX(0.2) scaleY(0.2);
+  }
+  50% {
+    transform: rotateZ(90deg) scaleX(0.4) scaleY(0.5);
+  }
+  100% {
+    transform: rotateZ(180deg) scaleX(0.2) scaleY(0.2);
+  }
+}
+
+@keyframes animateBg2 {
+  0% {
+    transform: rotateZ(360deg) scaleX(0.8) scaleY(0.7);
+  }
+  50% {
+    transform: rotateZ(180deg) scaleX(0.6) scaleY(0.5);
+  }
+  100% {
+    transform: rotateZ(0deg) scaleX(0.8) scaleY(0.7);
+  }
+}
+
+@keyframes animateBg3 {
+  0% {
+    transform: rotateZ(270deg) scaleX(0.6) scaleY(0.7);
+  }
+  50% {
+    transform: rotateZ(90deg) scaleX(1.0) scaleY(1.0);
+  }
+  100% {
+    transform: rotateZ(-90deg) scaleX(0.6) scaleY(0.7);
+  }
+}
+
+@keyframes animateBg4 {
+  0% {
+    transform: rotateZ(180deg) scaleX(1.0) scaleY(0.9);
+  }
+  50% {
+    transform: rotateZ(360deg) scaleX(1.2) scaleY(1.4);
+  }
+  100% {
+    transform: rotateZ(540deg) scaleX(1.0) scaleY(0.9);
+  }
+}

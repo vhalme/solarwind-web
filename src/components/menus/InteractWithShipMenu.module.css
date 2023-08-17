@@ -1,0 +1,54 @@
+.detailPanel {
+  position: absolute;
+  padding: 12px;
+  bottom: 12px;
+  left: 50%;
+  min-width: 300px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.shipDetails {
+}
+
+.shipDetails .shipName {
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2px dotted rgba(255, 255, 255, 0.25);
+}
+
+.shipDetails .shipActions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shipDetails .shipActionsLeft {
+  display: flex;
+  margin-left: -4px;
+}
+
+.shipDetails .shipActionsRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.shipDetails .shipActions .action {
+  margin-right: 4px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.rotation {
+  animation: rotateLeft 4s linear infinite;
+}
+
+@keyframes rotateLeft {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

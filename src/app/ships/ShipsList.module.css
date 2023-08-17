@@ -1,0 +1,71 @@
+.claimShip {
+  padding: 12px;
+}
+
+.claimShipInfo {
+  margin-bottom: 24px;
+  font-size: 18px;
+}
+
+.claimShipForm {
+  display: flex;
+  justify-content: center;
+}
+
+.claimShipForm .shipName {
+}
+
+.claimShipForm .claimButton {
+  margin-left: 12px;
+}
+
+.claimShipForm .claimButton button {
+  height: 56px;
+}
+
+.ships {
+  margin-top: 32px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logIn {
+  margin-top: 25vh;
+}
+
+.add {
+  position: relative;
+  width: 96vw;
+  max-width: 400px;
+  padding-bottom: 6px;
+  padding-top: 4px;
+  padding-left: 6px;
+  padding-right: 4px;
+  margin-right: 6px;
+  margin-left: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.add .addLabel {
+  display: flex;
+}
+
+.add .addIcon {
+  margin-right: 12px;
+}
+
+.add .addIcon svg {
+  font-size: 46px;
+}
+
+@media (max-width: 400px) {
+  .productFrame {
+    width: 90%;
+  }
+}
